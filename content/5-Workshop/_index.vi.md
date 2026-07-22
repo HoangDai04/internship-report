@@ -31,3 +31,4 @@ Bài Workshop này hướng dẫn bạn cách thiết lập VPC Endpoint (Gatewa
 Khi chưa có VPC Endpoint, máy chủ EC2 trong Private Subnet muốn kết nối tới S3 phải đi vòng qua NAT Gateway ra Internet công cộng rồi mới tới được Endpoint công khai của S3.
 
 Sau khi cấu hình VPC Gateway Endpoint cho S3, một thực thể logic sẽ được đính trực tiếp vào Route Table (Bảng định tuyến) của Private Subnet. Mọi traffic có đích đến là S3 sẽ tự động được định tuyến qua hạ tầng mạng nội bộ của AWS (AWS Backbone Network), đảm bảo dữ liệu không bao giờ rời khỏi tầm kiểm soát của hệ thống mạng private.
+![kien truc](/images/gym.drawio.png)
